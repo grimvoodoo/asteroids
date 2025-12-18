@@ -4,12 +4,12 @@ from circleshape import CircleShape
 from constants import LINE_WIDTH
 
 
-class asteroid(CircleShape):
+class Asteroid(CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
 
-    def draw(self, screen, colour, pos, radius):
-        draw.circle(screen, colour, pos, radius, LINE_WIDTH)
+    def draw(self, screen):
+        draw.circle(screen, "white", self.position, self.radius, LINE_WIDTH)
 
     def update(self, dt):
-
+        self.velocity *= dt
