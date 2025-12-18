@@ -12,4 +12,4 @@ class Asteroid(CircleShape):
         draw.circle(screen, "white", self.position, self.radius, LINE_WIDTH)
 
     def update(self, dt):
-        self.velocity *= dt
+        self.position += self.velocity * dt
